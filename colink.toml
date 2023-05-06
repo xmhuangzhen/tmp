@@ -5,6 +5,7 @@ keywords = ["federated learning", "machine learning"]
 description = "FedScale"
 language = "python"
 install_script = """
+pip install -e .
 """
 entrypoint = """
 unifed-test > debug.txt 2>&1
