@@ -5,6 +5,8 @@ keywords = ["federated learning", "machine learning"]
 description = "FedScale"
 language = "python"
 install_script = """
+conda create -n colink-protocol-unifed-test python=3.9.16 -y
+conda activate colink-protocol-unifed-test
 pip install -e .
 """
 entrypoint = """
