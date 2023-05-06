@@ -1,0 +1,11 @@
+[package]
+name = "unifed-test"
+version = "0.0.0"
+keywords = ["federated learning", "machine learning"]
+description = "FedScale"
+language = "python"
+install_script = """
+"""
+entrypoint = """
+unifed-test > debug.txt 2>&1
+"""
