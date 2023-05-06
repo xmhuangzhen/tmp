@@ -2,7 +2,7 @@
 
 from setuptools import setup, find_namespace_packages
 
-FRAMEWORK_NAME = 'fedscale'
+FRAMEWORK_NAME = 'test'
 
 setup(name=f'colink-unifed-{FRAMEWORK_NAME}',
       version='0.0',
