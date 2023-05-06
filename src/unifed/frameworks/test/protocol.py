@@ -28,19 +28,11 @@ def run_server(cl: CL.CoLink, param: bytes, participants: List[CL.Participant]):
     # run external program
     participant_id = [i for i, p in enumerate(participants) if p.user_id == cl.get_user_id()][0]
     
-    process_debug = subprocess.Popen(f'ls', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-    stdout_debug, stderr_debug = process_debug.communicate()
-    returncode_debug = process_debug.returncode
-
-    output = stdout_debug
-    cl.create_entry(f"{UNIFED_TASK_DIR}:{cl.get_task_id()}:output", output)
-    
-    log = stderr_debug
-    cl.create_entry(f"{UNIFED_TASK_DIR}:{cl.get_task_id()}:log", log)
     return json.dumps({
-        "stdout": output.decode(),
-        "stderr": log.decode(),
+            "server_ip": "1",
+            "stdout": "1",
+            "stderr": "1",
+            "returncode": "1",
     })
 
 
@@ -55,16 +47,10 @@ def run_client(cl: CL.CoLink, param: bytes, participants: List[CL.Participant]):
     # run external program
     participant_id = [i for i, p in enumerate(participants) if p.user_id == cl.get_user_id()][0]
     
-    process_debug = subprocess.Popen(f'ls', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-    stdout_debug, stderr_debug = process_debug.communicate()
-    returncode_debug = process_debug.returncode
-
-    output = stdout_debug
-    cl.create_entry(f"{UNIFED_TASK_DIR}:{cl.get_task_id()}:output", output)
-    log = stderr_debug
-    cl.create_entry(f"{UNIFED_TASK_DIR}:{cl.get_task_id()}:log", log)
     return json.dumps({
-        "stdout": output.decode(),
-        "stderr": log.decode(),
+            "server_ip": "1",
+            "stdout": "1",
+            "stderr": "1",
+            "returncode": "1",
     })
